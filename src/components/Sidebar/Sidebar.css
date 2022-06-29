@@ -1,0 +1,18 @@
+.icon-size {
+    width: 2rem;
+    height: 2rem;
+    color: blue;
+}
+
+.menu-item-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.menu-item-container::-webkit-scrollbar-thumb {
+    background: #10b981a6;
+    border-radius: 2px;
+}
+
+.menu-item-container::-webkit-scrollbar-track {
+    background: #f6f1f1;
+}
