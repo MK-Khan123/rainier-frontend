@@ -11,8 +11,7 @@ import Appointments from './Appointments/Appointments';
 
 const Home = () => {
     return (
-        // <Box sx={{ display: 'flex' }}>
-        <div style={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex' }}>
             <Sidebar />
             <Card sx={{ width: '100%', backgroundColor: '#F9F9F9', paddingLeft: '3rem' }} >
                 <CardContent>
@@ -29,8 +28,7 @@ const Home = () => {
                     </Box>
                 </CardContent>
             </Card>
-        </div>
-        // </Box>
+        </Box>
     );
 };
 

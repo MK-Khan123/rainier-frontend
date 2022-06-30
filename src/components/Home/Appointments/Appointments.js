@@ -17,8 +17,8 @@ const Appointments = () => {
                     <Timeline>
                         <TimelineItem sx={{ '::before': { content: 'none' } }}>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
-                                <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
+                                <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
+                                <TimelineConnector sx={{ position: 'relative', top: '2.5rem' }} />
                             </TimelineSeparator>
                             <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
@@ -27,8 +27,8 @@ const Appointments = () => {
 
                         <TimelineItem sx={{ '::before': { content: 'none' } }}>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
-                                <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
+                                <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
+                                <TimelineConnector sx={{ position: 'relative', top: '2.5rem' }} />
                             </TimelineSeparator>
                             <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
@@ -37,8 +37,8 @@ const Appointments = () => {
 
                         <TimelineItem sx={{ '::before': { content: 'none' } }}>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
-                                <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
+                                <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
+                                <TimelineConnector sx={{ position: 'relative', top: '2.5rem' }} />
                             </TimelineSeparator>
                             <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
@@ -47,7 +47,7 @@ const Appointments = () => {
 
                         <TimelineItem sx={{ '::before': { content: 'none' } }}>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
+                                <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
                             </TimelineSeparator>
                             <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />

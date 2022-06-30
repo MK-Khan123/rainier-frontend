@@ -10,17 +10,10 @@ import DoneIcon from '@mui/icons-material/Done';
 
 const ToDoList = () => {
     return (
-        <Card sx={{ minWidth: 275, padding: '1.25rem', maxWidth: '45rem' }}>
-            <CardContent>
-                To-Do List
-                <Box
-                    mt={1}
-                    sx={{
-                        maxWidth: '90%',
-                        display: 'flex',
-                        alignItems: 'flex-start'
-                    }}
-                >
+        <Card sx={{ minWidth: 275, padding: '1.25rem 0.625rem', maxWidth: '45rem' }}>
+            <CardContent sx={{ paddingX: '0.5rem' }}>
+                <Typography variant='h5' fontWeight='500' fontSize='1rem'>To-Do List</Typography>
+                <Box mt={1} sx={{ maxWidth: '90%', display: 'flex', alignItems: 'flex-start' }}>
                     <TextField
                         type="text"
                         InputLabelProps={{
@@ -46,23 +39,11 @@ const ToDoList = () => {
                         Add
                     </Button>
                 </Box>
-                <Box
-                    mt={2}
-                    sx={{
-                        maxWidth: '90%',
-                        display: 'flex',
-                        justifyContent: 'space-between'
-                    }}
-                >
-                    <Box>
-                        <Checkbox
-                            sx={{
-                                fontSize: '1.625rem',
-                                color: '#FF7594',
-                                '&.Mui-checked': { color: '#FF7594' }
-                            }}
-                        /> Select All
-                    </Box>
+                <Box mt={2} sx={{ maxWidth: '90%', display: 'flex', justifyContent: 'space-between' }}>
+                    <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                        Select All
+                    </Typography>
 
                     <Button
                         startIcon={<DoneIcon />}
@@ -81,40 +62,42 @@ const ToDoList = () => {
                     </Button>
                 </Box>
                 <Box>
-                    <Checkbox
-                        sx={{
-                            fontSize: '1.625rem',
-                            color: '#FF7594',
-                            '&.Mui-checked': { color: '#FF7594' }
-                        }}
-                    />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <Typography variant='body1'>Last Added: 10 sep 2022</Typography>
-                    <Checkbox
-                        sx={{
-                            fontSize: '1.625rem',
-                            color: '#FF7594',
-                            '&.Mui-checked': { color: '#FF7594' }
-                        }}
-                    />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <Typography variant='body1'>Last Added: 10 sep 2022</Typography>
-                    <Checkbox
-                        sx={{
-                            fontSize: '1.625rem',
-                            color: '#FF7594',
-                            '&.Mui-checked': { color: '#FF7594' }
-                        }}
-                    />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <Typography variant='body1'>Last Added: 10 sep 2022</Typography>
-                    <Checkbox
-                        defaultChecked
-                        disabled
-                        sx={{
-                            fontSize: '1.625rem',
-                            color: '#FF7594',
-                            '&.Mui-checked': { color: '#FF7594' }
-                        }}
-                    />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <Typography variant='body1'>Last Added: 10 sep 2022</Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </Typography>
+                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                            Last Added: 10 sep 2022
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }} >
+                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#FF7594' } }} />
+                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </Typography>
+                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                            Last Added: 10 sep 2022
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </Typography>
+                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                            Last Added: 10 sep 2022
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </Typography>
+                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                            Last Added: 10 sep 2022
+                        </Typography>
+                    </Box>
                 </Box>
             </CardContent>
         </Card>
