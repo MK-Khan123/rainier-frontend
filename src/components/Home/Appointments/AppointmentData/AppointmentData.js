@@ -3,41 +3,42 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { Paper } from '@mui/material';
 
 const AppointmentData = () => {
     return (
-        <Card sx={{ minWidth: 200 }}>
-            <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}>
-                <Box sx={{ display: 'flex', height: '100%' }}>
-                    <Box
-                        sx={{
-                            height: '100%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            border: '1px solid black',
-                            borderRadius: '15px'
-                        }}
-                    >
-                        <Box>
+        <Card sx={{ minWidth: 200, marginBottom: '1rem', borderRadius: '15px 8px 8px 15px' }}>
+            <CardContent sx={{ padding: 0, ':last-child': { padding: 0 }, display: 'flex', backgroundColor: '#FFF5F5' }}>
+                <Paper
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        borderRadius: '15px'
+                    }}
+                >
+                    <Box p={2}>
+                        <Typography color='#8A8686' fontWeight='500' textAlign='center' fontSize='0.8rem' variant='body1'>
                             2022
-                        </Box>
-                        <Box>
+                        </Typography>
+                        <Typography textAlign='center' fontSize='1.25rem' fontWeight='600' variant='h5' component='div'>
                             13
-                        </Box>
-                        <Box>
+                        </Typography>
+                        <Typography color='#8A8686' fontWeight='500' textAlign='center' fontSize='1.25rem' variant='h5' component='div'>
                             Sep
-                        </Box>
+                        </Typography>
                     </Box>
+                </Paper>
 
-                    <Box>
-                        <Typography fontSize='1rem' variant='h5' gutterBottom component='div'>
-                            Dr. Muhammad Abdul Hussein
-                        </Typography>
-                        <Typography variant='body2' fontWeight='400' component='div'>
-                            Cardiologist
-                        </Typography>
-                        <Box sx={{ display: 'flex' }}>
+                <Box px={1} py={2}>
+                    <Typography fontSize='1rem' fontWeight='500' variant='h5' component='div'>
+                        Dr. Muhammad Abdul Hussein
+                    </Typography>
+                    <Typography variant='body2' fontWeight='400' gutterBottom component='div'>
+                        Cardiologist
+                    </Typography>
+                    <Box sx={{ display: 'flex' }}>
+                        <Box sx={{ backgroundColor: '#FFF', borderRadius: '5px', padding: '3px' }}>
                             <Typography variant='h6' fontSize='0.875rem' component='div'>
                                 <Box
                                     component='span'
@@ -46,7 +47,9 @@ const AppointmentData = () => {
                                     Slot
                                 </Box> Morning
                             </Typography>
-                            <Typography ml={1} variant='h6' fontSize='0.875rem' component='div'>
+                        </Box>
+                        <Box ml={1} sx={{ backgroundColor: '#FFF', borderRadius: '5px', padding: '3px' }}>
+                            <Typography variant='h6' fontSize='0.875rem' component='div'>
                                 <Box
                                     component='span'
                                     color='#8A8686'

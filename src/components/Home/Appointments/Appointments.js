@@ -11,16 +11,16 @@ import AppointmentData from './AppointmentData/AppointmentData';
 
 const Appointments = () => {
     return (
-        <Box>
-            <Card sx={{ minWidth: 275, maxWidth: 350 }}>
-                <CardContent>
+        <Box mt={4} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+                <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }} >
                     <Timeline>
                         <TimelineItem sx={{ '::before': { content: 'none' } }}>
                             <TimelineSeparator>
                                 <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
                                 <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
                             </TimelineSeparator>
-                            <TimelineContent>
+                            <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
                             </TimelineContent>
                         </TimelineItem>
@@ -30,7 +30,7 @@ const Appointments = () => {
                                 <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
                                 <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
                             </TimelineSeparator>
-                            <TimelineContent>
+                            <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
                             </TimelineContent>
                         </TimelineItem>
@@ -40,7 +40,7 @@ const Appointments = () => {
                                 <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
                                 <TimelineConnector sx={{ position: 'relative', top: '1.8rem' }} />
                             </TimelineSeparator>
-                            <TimelineContent>
+                            <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
                             </TimelineContent>
                         </TimelineItem>
@@ -49,14 +49,14 @@ const Appointments = () => {
                             <TimelineSeparator>
                                 <TimelineDot sx={{ position: 'relative', top: '1.8rem' }} color="error" />
                             </TimelineSeparator>
-                            <TimelineContent>
+                            <TimelineContent sx={{ paddingRight: '0' }}>
                                 <AppointmentData />
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
                 </CardContent>
             </Card>
-        </Box>
+        </Box >
     );
 };
 
