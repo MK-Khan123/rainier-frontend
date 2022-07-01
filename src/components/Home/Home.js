@@ -8,6 +8,7 @@ import HeaderMain from './HeaderMain/HeaderMain';
 import PatientStat from './PatientStat/PatientStat';
 import ToDoList from './ToDoList/ToDoList';
 import Appointments from './Appointments/Appointments';
+import CovidUpdates from './CovidUpdates/CovidUpdates';
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
                         </Box>
                         <Box flexGrow={1}>
                             <Appointments />
+                            <CovidUpdates />
                         </Box>
                     </Box>
                 </CardContent>
