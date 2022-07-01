@@ -22,10 +22,10 @@ const Home = () => {
                             <HeaderMain />
                             <PatientStat />
                             <ToDoList />
+                            <CovidUpdates />
                         </Box>
                         <Box flexGrow={1}>
-                            <Appointments />
-                            <CovidUpdates />
+                            <Appointments />                            
                         </Box>
                     </Box>
                 </CardContent>

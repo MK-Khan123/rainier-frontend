@@ -33,7 +33,7 @@ const AppointmentData = ({ appointment }) => {
                     </Box>
                 </Paper>
 
-                <Box px={1} py={2}>
+                <Box sx={{ paddingX: 1, paddingY: 2 }}>
                     <Typography fontSize='1rem' fontWeight='500' variant='h5' component='div'>
                         {doctor_name}
                     </Typography>
