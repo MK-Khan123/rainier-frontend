@@ -1,13 +1,14 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+// import Card from '@mui/material/Card';
+// import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import bannerImage from '../../../images/header-main/banner-image.svg';
 
 const HeaderMain = () => {
     return (
-        <Card            
+        <Box            
             sx={{
                 maxWidth: '45rem',
                 background: 'linear-gradient(91.57deg, #FF7594 19.86%, #FF797B 84.16%, #FF7C65 139.72%)',
@@ -15,7 +16,7 @@ const HeaderMain = () => {
                 marginTop: '2rem'
             }}
         >
-            <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}>
+            {/* <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}> */}
                 <Grid container>
                     <Grid item md={6}>
                         <img src={bannerImage} alt="" />
@@ -27,19 +28,19 @@ const HeaderMain = () => {
                             justifyContent: 'center'
                         }}
                     >
-                        <Typography fontSize='1.5rem' fontWeight='600' variant="h5" gutterBottom component="div">
+                        <Typography color='#FFF' fontSize='1.5rem' fontWeight='600' variant="h5" gutterBottom component="div">
                             Hello, Mary Jane!
                         </Typography>
-                        <Typography mt={1} fontSize='1rem' variant="body1" gutterBottom>
+                        <Typography color='#FFF' mt={1} fontSize='1rem' variant="body1" gutterBottom>
                             Stay up-to-date with your appointments.
                         </Typography>
-                        <Typography mt={1} fontSize='1rem' variant="body1" gutterBottom>
+                        <Typography color='#FFF' mt={1} fontSize='1rem' variant="body1" gutterBottom>
                             You have no pending reports.
                         </Typography>
                     </Grid>
                 </Grid>
-            </CardContent>
-        </Card>
+            {/* </CardContent> */}
+        </Box>
     );
 };
 

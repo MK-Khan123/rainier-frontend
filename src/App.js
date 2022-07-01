@@ -33,9 +33,9 @@ const App = () => {
   return (
     <DarkModeContext.Provider value={[mode, setMode]}>
       <ThemeProvider theme={theme}>
-        <Paper sx={{ height: '100vh' }}>
+        {/* <Paper sx={{ height: '100vh' }}> */}
           <Home />
-        </Paper>
+        {/* </Paper> */}
       </ThemeProvider>
     </DarkModeContext.Provider>
   );

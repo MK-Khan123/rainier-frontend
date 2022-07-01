@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
@@ -10,7 +11,7 @@ import DoneIcon from '@mui/icons-material/Done';
 
 const ToDoList = () => {
     return (
-        <Card sx={{ minWidth: 275, padding: '1.25rem 0.625rem', maxWidth: '45rem' }}>
+        <Card sx={{ minWidth: 275, padding: { xs: '0.625rem', md: '1.25rem 0.625rem' }, maxWidth: 400, mt: 4 }}>
             <CardContent sx={{ paddingX: '0.5rem' }}>
                 <Typography variant='h5' fontWeight='500' fontSize='1rem'>To-Do List</Typography>
                 <Box mt={1} sx={{ maxWidth: '90%', display: 'flex', alignItems: 'flex-start' }}>
@@ -33,7 +34,8 @@ const ToDoList = () => {
                             paddingX: '0.75rem',
                             marginLeft: '1rem',
                             width: '5.1875rem',
-                            height: '2rem'
+                            height: '2rem',
+                            display: { xs: 'none', md: 'inline-block' }
                         }}
                     >
                         Add
@@ -54,7 +56,7 @@ const ToDoList = () => {
                             color: 'white',
                             paddingX: '0.75rem',
                             marginLeft: '1rem',
-                            width: '5.1875rem',
+                            width: { md: '5.1875rem' },
                             height: '2rem'
                         }}
                     >
@@ -62,45 +64,51 @@ const ToDoList = () => {
                     </Button>
                 </Box>
                 <Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
-                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </Typography>
-                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
-                            Last Added: 10 sep 2022
-                        </Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }} >
-                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#FF7594' } }} />
-                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </Typography>
-                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
-                            Last Added: 10 sep 2022
-                        </Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
-                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </Typography>
-                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
-                            Last Added: 10 sep 2022
-                        </Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
-                        <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </Typography>
-                        <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
-                            Last Added: 10 sep 2022
-                        </Typography>
-                    </Box>
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Checkbox defaultChecked sx={{ pl: 0, pt: { xs: 0 }, display: 'inline', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+                                    <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </Typography>
+                                    <Typography ml={{ md: 2 }} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                                        Last Added: 10 sep 2022
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        {/* <Grid item>
+                            <Checkbox defaultChecked sx={{ pl: 0, pt: { xs: 0 }, color: '#FF7594', '&.Mui-checked': { color: '#FF7594' } }} />
+                            <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </Typography>
+                            <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                                Last Added: 10 sep 2022
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Checkbox defaultChecked sx={{ pl: 0, pt: { xs: 0 }, color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                            <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </Typography>
+                            <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                                Last Added: 10 sep 2022
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Checkbox defaultChecked sx={{ pl: 0, pt: { xs: 0 }, color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                            <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </Typography>
+                            <Typography ml={2} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
+                                Last Added: 10 sep 2022
+                            </Typography>
+                        </Grid> */}
+                    </Grid>
                 </Box>
             </CardContent>
-        </Card>
+        </Card >
     );
 };
 

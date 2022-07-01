@@ -44,11 +44,11 @@ const PatientStat = () => {
     ];
 
     return (
-        <Grid container sx={{ maxWidth: '45rem', marginTop: '1.75rem', paddingBottom:'2rem' }}>
+        <Grid container rowSpacing={2} sx={{ maxWidth: '45rem', marginTop: '1.75rem', paddingBottom: '2rem' }}>
             {
                 patientStat.map(stat => {
                     return (
-                        <Grid item md={3}>
+                        <Grid key={stat?.title} item xs={6} md={3}>
                             <Card
                                 sx={{
                                     maxWidth: '10rem',
@@ -59,7 +59,7 @@ const PatientStat = () => {
                                     padding: '0.7rem'
                                 }}
                             >
-                                <CardContent sx={{padding: 0}}>
+                                <CardContent sx={{ padding: 0 }}>
                                     <img src={stat?.icon} alt={stat?.icon} />
                                     <Typography
                                         mt={1}
