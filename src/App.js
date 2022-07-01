@@ -28,13 +28,23 @@ const App = () => {
         '"Segoe UI Symbol"',
       ].join(','),
     },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 390,
+        md: 834,
+        lg: 1200,
+        xl: 1512,
+      },
+    },
   });
+
 
   return (
     <DarkModeContext.Provider value={[mode, setMode]}>
       <ThemeProvider theme={theme}>
         {/* <Paper sx={{ height: '100vh' }}> */}
-          <Home />
+        <Home />
         {/* </Paper> */}
       </ThemeProvider>
     </DarkModeContext.Provider>

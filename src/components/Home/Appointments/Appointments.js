@@ -51,36 +51,34 @@ const appointmentData = [
 
 const Appointments = () => {
     return (
-        <Box>
-            <Card sx={{ minWidth: 275, maxWidth: 400 }}>
-                <Typography variant='h5' fontWeight='500' pl={2} pt={2} component='div'>
-                    Upcoming Appointments
-                </Typography>
-                <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }} >
-                    <Timeline>
-                        {
-                            appointmentData?.map((appointment, index) => {
-                                return (
-                                    <TimelineItem key={index} sx={{ '::before': { content: 'none' } }}>
-                                        <TimelineSeparator>
-                                            <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
-                                            {
-                                                ((index + 1) < appointmentData?.length) && <TimelineConnector sx={{ position: 'relative', top: '2.5rem' }} />
-                                            }
-                                        </TimelineSeparator>
-                                        <TimelineContent sx={{ paddingRight: '0' }}>
-                                            <AppointmentData
-                                                appointment={appointment}
-                                            />
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                );
-                            })
-                        }
-                    </Timeline>
-                </CardContent>
-            </Card>
-        </Box >
+        <Card sx={{ minWidth: 275, marginLeft: { sm: 2 } }}>
+            <Typography variant='h5' fontSize='1.25rem' fontWeight='600' pl={2} pt={2} component='div'>
+                Upcoming Appointments
+            </Typography>
+            <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }} >
+                <Timeline>
+                    {
+                        appointmentData?.map((appointment, index) => {
+                            return (
+                                <TimelineItem key={index} sx={{ '::before': { content: 'none' } }}>
+                                    <TimelineSeparator>
+                                        <TimelineDot sx={{ position: 'relative', top: '2.5rem' }} color="error" />
+                                        {
+                                            ((index + 1) < appointmentData?.length) && <TimelineConnector sx={{ position: 'relative', top: '2.5rem' }} />
+                                        }
+                                    </TimelineSeparator>
+                                    <TimelineContent sx={{ paddingRight: '0' }}>
+                                        <AppointmentData
+                                            appointment={appointment}
+                                        />
+                                    </TimelineContent>
+                                </TimelineItem>
+                            );
+                        })
+                    }
+                </Timeline>
+            </CardContent>
+        </Card>
     );
 };
 

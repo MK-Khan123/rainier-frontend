@@ -15,24 +15,26 @@ const Home = () => {
     return (
         <>
             <Sidebar />
-            <Box pl={12}>
+            <Box pl={12} pr={5}>
                 <Grid container>
-                    <Grid item md={12}>
+                    <Grid item xs={12}>
                         <TopNavigation />
                     </Grid>
-                    <Grid item md={12}>
+                    <Grid item xs={12}>
                         <HeaderMain />
                     </Grid>
-                    <Grid item md={12}>
+                    <Grid item xs={12}>
                         <PatientStat />
                     </Grid>
-                    <Grid item md={12}>
-                        <Appointments />
-                    </Grid>
-                    <Grid item md={12}>
-                        <ToDoList />
-                    </Grid>
-                    <Grid item md={12}>
+                    <Box sx={{ display: { md: 'flex' }, flexDirection: { md: 'row-reverse' } }}>
+                        <Grid item xs={12}>
+                            <Appointments />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <ToDoList />
+                        </Grid>
+                    </Box>
+                    <Grid item xs={12}>
                         <CovidUpdates />
                     </Grid>
                 </Grid>
