@@ -81,30 +81,28 @@ const PatientStat = () => {
                                     >
                                         {stat?.measurement}
                                     </Typography>
-                                    <Typography
-                                        mt={1}
-                                        fontSize='0.75rem'
-                                        fontWeight='500'
-                                        variant="body1"
-                                        gutterBottom
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}
                                     >
-                                        <Box
-                                            sx={{
-                                                display: 'flex',
-                                                alignItems: 'center'
-                                            }}
-                                        >
-                                            <ArrowDropUpIcon />
-                                            <Box
-                                                sx={{
-                                                    color: stat?.color,
-                                                    textTransform: 'capitalize'
-                                                }}
+                                        <ArrowDropUpIcon />
+                                        <Box>
+                                            <Typography
+                                                mt={1}
+                                                color={stat?.color}
+                                                textTransform='capitalize'
+                                                fontSize='0.75rem'
+                                                fontWeight='500'
+                                                variant="body1"
+                                                gutterBottom
                                             >
                                                 {stat?.condition}
-                                            </Box>
+                                            </Typography>
                                         </Box>
-                                    </Typography>
+                                    </Box>
+
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -112,7 +110,7 @@ const PatientStat = () => {
                 })
             }
 
-        </Grid>
+        </Grid >
     );
 };
 
