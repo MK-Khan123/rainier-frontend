@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+// import Card from '@mui/material/Card';
+// import CardContent from '@mui/material/CardContent';
 import Sidebar from '../Sidebar/Sidebar';
 import TopNavigation from './TopNavigation/TopNavigation';
 import HeaderMain from './HeaderMain/HeaderMain';
@@ -39,14 +39,8 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Box>
-        </>
 
-    );
-};
-
-export default Home;
-
-{/* <Card sx={{ width: '100%', backgroundColor: '#F9F9F9', paddingLeft: '3rem' }} >
+            {/* <Card sx={{ width: '100%', backgroundColor: '#F9F9F9', paddingLeft: '3rem' }} >
                     <CardContent>
                         <TopNavigation />
                         <Box display='flex'>
@@ -62,3 +56,9 @@ export default Home;
                         </Box>
                     </CardContent>
                 </Card> */}
+        </>
+
+    );
+};
+
+export default Home;

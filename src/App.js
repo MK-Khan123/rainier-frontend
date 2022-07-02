@@ -1,7 +1,7 @@
 import Home from './components/Home/Home';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { createContext, useState } from 'react';
-import { Paper } from '@mui/material';
+// import { Paper } from '@mui/material';
 
 export const DarkModeContext = createContext();
 
