@@ -1,7 +1,5 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
 import Sidebar from '../Sidebar/Sidebar';
 import TopNavigation from './TopNavigation/TopNavigation';
 import HeaderMain from './HeaderMain/HeaderMain';
@@ -39,25 +37,7 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Box>
-
-            {/* <Card sx={{ width: '100%', backgroundColor: '#F9F9F9', paddingLeft: '3rem' }} >
-                    <CardContent>
-                        <TopNavigation />
-                        <Box display='flex'>
-                            <Box flexGrow={2}>
-                                <HeaderMain />
-                                <PatientStat />
-                                <ToDoList />
-                                <CovidUpdates />
-                            </Box>
-                            <Box flexGrow={1}>
-                                <Appointments />
-                            </Box>
-                        </Box>
-                    </CardContent>
-                </Card> */}
         </>
-
     );
 };
 

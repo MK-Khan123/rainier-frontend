@@ -109,7 +109,6 @@ const PatientStat = () => {
                     );
                 })
             }
-
         </Grid >
     );
 };

@@ -10,9 +10,15 @@ const CovidUpdates = () => {
     return (
         <Card sx={{ minWidth: 200, marginBottom: '1rem', borderRadius: '8px', mt: 4 }}>
             <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}>
-                <Typography variant='h5' fontWeight='600' fontSize='1.25rem' gutterBottom component='div' p={2}>Covid-19 Updates</Typography>
-                <Typography variant='body1' fontWeight='500' fontSize='1rem' pl={2}>10 September 2022</Typography>
-                <Typography variant='body1' fontSize='1rem' color='#8A8686' gutterBottom pl={2}>Thursday 10:00 AM</Typography>
+                <Box
+                    sx={{ display: { md: 'flex', alignItems: 'center', justifyContent: 'space-between' } }}
+                >
+                    <Typography variant='h5' fontWeight='600' fontSize='1.25rem' gutterBottom component='div' p={2}>Covid-19 Updates</Typography>
+                    <Box sx={{ p: { md: 2 } }}>
+                        <Typography variant='body1' fontWeight='500' fontSize='1rem' pl={2}>10 September 2022</Typography>
+                        <Typography variant='body1' fontSize='1rem' color='#8A8686' gutterBottom pl={2}>Thursday 10:00 AM</Typography>
+                    </Box>
+                </Box>
 
                 <Grid container align='center' pb={3}>
                     <Grid item xs={12} md={6}>

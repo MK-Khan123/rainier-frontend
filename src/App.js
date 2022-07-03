@@ -1,7 +1,6 @@
 import Home from './components/Home/Home';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { createContext, useState } from 'react';
-// import { Paper } from '@mui/material';
 
 export const DarkModeContext = createContext();
 
@@ -11,7 +10,7 @@ const App = () => {
 
   const theme = createTheme({
     palette: {
-      mode: mode ? 'light' : 'dark'
+      mode: mode ? 'light' : 'dark',
     },
     typography: {
       fontFamily: [
@@ -39,13 +38,10 @@ const App = () => {
     },
   });
 
-
   return (
     <DarkModeContext.Provider value={[mode, setMode]}>
       <ThemeProvider theme={theme}>
-        {/* <Paper sx={{ height: '100vh' }}> */}
         <Home />
-        {/* </Paper> */}
       </ThemeProvider>
     </DarkModeContext.Provider>
   );
