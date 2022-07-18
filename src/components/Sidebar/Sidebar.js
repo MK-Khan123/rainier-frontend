@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MuiDrawer from '@mui/material/Drawer';
@@ -15,9 +16,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import homeIcon from '../../images/sidebar/home.svg';
 import patientIcon from '../../images/sidebar/patient-profile.svg';
+import patientIconDark from '../../images/sidebar/patient-profile-dark.svg';
 import appointmentIcon from '../../images/sidebar/appointment.svg';
+import appointmentIconDark from '../../images/sidebar/appointment-dark.svg';
 import medicalHistoryIcon from '../../images/sidebar/medical-history.svg';
+import medicalHistoryIconDark from '../../images/sidebar/medical-history-dark.svg';
 import settingsIcon from '../../images/sidebar/icon-settings.svg';
+import settingsIconDark from '../../images/sidebar/icon-settings-dark.svg';
 import newAppointmentIcon from '../../images/sidebar/new-appointment-icon.svg';
 import logo from '../../images/sidebar/company-logo.svg';
 import './Sidebar.css';
@@ -75,23 +80,38 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const menuItems = [
     {
         title: 'Home',
-        icon: homeIcon
+        icon: {
+            light: homeIcon,
+            dark: homeIcon
+        }
     },
     {
         title: 'Patient Profile',
-        icon: patientIcon
+        icon: {
+            light: patientIcon,
+            dark: patientIconDark
+        }
     },
     {
         title: 'Appointments',
-        icon: appointmentIcon
+        icon: {
+            light: appointmentIcon,
+            dark: appointmentIconDark
+        }
     },
     {
         title: 'Medical History',
-        icon: medicalHistoryIcon
+        icon: {
+            light: medicalHistoryIcon,
+            dark: medicalHistoryIconDark
+        }
     },
     {
         title: 'Settings',
-        icon: settingsIcon
+        icon: {
+            light: settingsIcon,
+            dark: settingsIconDark
+        }
     }
 ];
 
@@ -107,10 +127,18 @@ const Sidebar = () => {
         setOpen(false);
     };
 
+    const theme = useTheme();
+
     return (
         <Box sx={{ xs: { position: 'fixed' } }}>
             <CssBaseline />
-            <Drawer variant="permanent" open={open}>
+            <Drawer variant="permanent"
+                PaperProps={{
+                    sx: {
+                        backgroundColor: theme.palette.mode === 'dark' ? '#2E1619' : '',
+                    }
+                }}
+                open={open}>
                 <Box
                     sx={{
                         display: 'flex',
@@ -131,10 +159,10 @@ const Sidebar = () => {
                                 aria-label="open drawer"
                                 onClick={handleDrawerOpen}
                                 sx={{
-                                    color: "#FF7594",
+                                    backgroundColor: theme.palette.mode === 'dark' ? '#FF7594' : '',
+                                    color: theme.palette.mode === 'dark' ? '#D1D5DB' : '#FF7594',
                                     width: '41px',
                                     height: '41px',
-                                    background: "#FFFFFF",
                                     margin: '0.5rem',
                                     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
                                     borderRadius: '5px',
@@ -165,8 +193,8 @@ const Sidebar = () => {
                     </div>
 
                     <List>
-                        {menuItems.map((menu) => (
-                            <ListItem key={menu?.title} disablePadding sx={{ display: 'block' }}>
+                        {menuItems?.map(menu => (
+                            <ListItem key={menu.title} disablePadding sx={{ display: 'block' }}>
                                 <ListItemButton
                                     sx={{
                                         minHeight: 48,
@@ -181,13 +209,13 @@ const Sidebar = () => {
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        <img className='icon-size' src={menu?.icon} alt="" />
+                                        <img className='icon-size' src={theme.palette.mode === 'dark' ? menu.icon.dark : menu.icon.light} alt="" />
                                     </ListItemIcon>
                                     <ListItemText
                                         primary={menu?.title}
                                         sx={{
                                             opacity: open ? 1 : 0,
-                                            color: menu?.title === 'Home' ? '#FF7594' : '#2E1619',
+                                            color: menu.title === 'Home' ? '#FF7594' : (theme.palette.mode === 'dark' ? '#D1D5DB' : '#2E1619'),
                                             letterSpacing: '0.01rem'
                                         }}
                                     />

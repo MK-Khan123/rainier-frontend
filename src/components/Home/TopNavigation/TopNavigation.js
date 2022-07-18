@@ -25,7 +25,7 @@ const TopNavigation = () => {
             }}
         >
             <Typography
-                color='#646F75'
+                color={theme.palette.mode === 'dark' ? '#FFF' : '#646F75'}
                 lineHeight='2.25rem'
                 fontSize='1.5rem'
                 fontWeight='600'
@@ -34,7 +34,7 @@ const TopNavigation = () => {
             >
                 Home
             </Typography>
-            <Box                
+            <Box
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
