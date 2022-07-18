@@ -12,7 +12,7 @@ const AppointmentData = ({ appointment }) => {
     const theme = useTheme();
 
     return (
-        <Card sx={{ minWidth: 200, marginBottom: '1rem', borderRadius: '15px 8px 8px 15px' }}>
+        <Card sx={{ minWidth: 200, marginBottom: '1rem', borderRadius: '15px 8px 8px 15px', border: theme.palette.mode === 'dark' ? '1px solid white' : '' }}>
             <CardContent
                 sx={{
                     padding: 0,
@@ -23,6 +23,7 @@ const AppointmentData = ({ appointment }) => {
             >
                 <Paper
                     sx={{
+                        backgroundColor: '#FFF',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
@@ -40,6 +41,7 @@ const AppointmentData = ({ appointment }) => {
                             {year}
                         </Typography>
                         <Typography
+                            color='#000'
                             textAlign='center'
                             fontSize='1.25rem'
                             fontWeight='600'

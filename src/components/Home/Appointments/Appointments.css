@@ -1,0 +1,12 @@
+.appointment-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.appointment-container::-webkit-scrollbar-thumb {
+  background: #ff7590;
+  border-radius: 2px;
+}
+
+.appointment-container::-webkit-scrollbar-track {
+  background: #f6f1f1;
+}
