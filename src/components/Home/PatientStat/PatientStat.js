@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -6,9 +7,13 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import heart from '../../../images/patient-stat/heart.svg';
+import heartDark from '../../../images/patient-stat/heart-dark.svg';
 import bloodPressure from '../../../images/patient-stat/blood-pressure.svg';
+import bloodPressureDark from '../../../images/patient-stat/blood-pressure-dark.svg';
 import oxygenSaturation from '../../../images/patient-stat/bubble.svg';
+import oxygenSaturationDark from '../../../images/patient-stat/bubble-dark.svg';
 import glucoseCount from '../../../images/patient-stat/blood-sugar.svg';
+import glucoseCountDark from '../../../images/patient-stat/blood-sugar-dark.svg';
 
 const PatientStat = () => {
 
@@ -17,38 +22,52 @@ const PatientStat = () => {
             title: 'pulse count',
             measurement: '60 bpm',
             condition: 'normal',
-            icon: heart,
+            icon: {
+                light: heart,
+                dark: heartDark
+            },
             color: '#03922B'
         },
         {
             title: 'blood pressure',
             measurement: '110/70 mm/Hg',
             condition: 'slightly higher',
-            icon: bloodPressure,
+            icon: {
+                light: bloodPressure,
+                dark: bloodPressureDark
+            },
             color: '#82AB0D'
         },
         {
             title: 'oxygen saturation',
             measurement: '97 %',
             condition: 'slightly higher',
-            icon: oxygenSaturation,
+            icon: {
+                light: oxygenSaturation,
+                dark: oxygenSaturationDark
+            },
             color: '#82AB0D'
         },
         {
             title: 'glucose count',
             measurement: '100 mm/dL',
             condition: 'normal',
-            icon: glucoseCount,
+            icon: {
+                light: glucoseCount,
+                dark: glucoseCountDark
+            },
             color: '#03922B'
         }
     ];
 
+    const theme = useTheme();
+
     return (
         <Grid container spacing={2} sx={{ marginTop: '1.75rem', paddingBottom: '2rem' }}>
             {
-                patientStat.map(stat => {
+                patientStat?.map(stat => {
                     return (
-                        <Grid key={stat?.title} item xs={6} sm={6} md={3}>
+                        <Grid key={stat.title} item xs={6} sm={6} md={3}>
                             <Card
                                 sx={{
                                     maxWidth: '10rem',
@@ -61,25 +80,27 @@ const PatientStat = () => {
                                 }}
                             >
                                 <CardContent sx={{ padding: 0 }}>
-                                    <img src={stat?.icon} alt={stat?.icon} />
+                                    <img src={theme.palette.mode === 'dark' ? stat.icon.dark : stat.icon.light} alt={stat.title} />
                                     <Typography
                                         mt={1}
+                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
                                         textTransform='capitalize'
                                         fontSize='0.8rem'
                                         fontWeight='600'
                                         variant="body1"
                                         gutterBottom
                                     >
-                                        {stat?.title}
+                                        {stat.title}
                                     </Typography>
                                     <Typography
                                         mt={1}
+                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
                                         fontSize='1rem'
                                         fontWeight='600'
                                         variant="body1"
                                         gutterBottom
                                     >
-                                        {stat?.measurement}
+                                        {stat.measurement}
                                     </Typography>
                                     <Box
                                         sx={{
@@ -87,22 +108,21 @@ const PatientStat = () => {
                                             alignItems: 'center'
                                         }}
                                     >
-                                        <ArrowDropUpIcon />
+                                        <ArrowDropUpIcon sx={{ color: theme.palette.mode === 'dark' ? '#D1D5DB' : '' }} />
                                         <Box>
                                             <Typography
                                                 mt={1}
-                                                color={stat?.color}
+                                                color={theme.palette.mode === 'dark' ? '#D1D5DB' : stat.color}
                                                 textTransform='capitalize'
                                                 fontSize='0.75rem'
                                                 fontWeight='500'
                                                 variant="body1"
                                                 gutterBottom
                                             >
-                                                {stat?.condition}
+                                                {stat.condition}
                                             </Typography>
                                         </Box>
                                     </Box>
-
                                 </CardContent>
                             </Card>
                         </Grid>
