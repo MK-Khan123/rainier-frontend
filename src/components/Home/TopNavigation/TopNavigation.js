@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import darkIcon from '../../../images/top-navigation/dark.svg';
 import lightIcon from '../../../images/top-navigation/light.svg';
 import avatar from '../../../images/top-navigation/avatar.png';
+import avatarDark from '../../../images/top-navigation/avatar-dark.png';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { DarkModeContext } from '../../../App';
 
@@ -51,7 +52,7 @@ const TopNavigation = () => {
                         )
                     }
                 </IconButton>
-                <Avatar sx={{ width: '3rem', height: '3rem' }} alt="Profile Pic" src={avatar} />
+                <Avatar sx={{ width: '3rem', height: '3rem' }} alt="Profile Pic" src={theme.palette.mode === 'dark' ? avatarDark : avatar} />
                 <ExpandMoreIcon />
             </Box>
         </Box >
