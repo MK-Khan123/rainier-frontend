@@ -100,7 +100,8 @@ const Appointments = () => {
                 minWidth: 275,
                 marginLeft: { sm: 2 },
                 maxHeight: { sm: '29.25rem', md: '35.625rem' },
-                overflow: 'auto'
+                overflow: 'auto',
+                borderRadius: '8px'
             }}
         >
             <Typography variant='h5' fontSize='1.25rem' fontWeight='600' pl={2} pt={2} component='div'>

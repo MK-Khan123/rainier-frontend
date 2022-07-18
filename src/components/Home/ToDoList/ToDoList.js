@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -33,11 +33,37 @@ const toDos = [
 ];
 
 const ToDoList = () => {
+
+    const theme = useTheme();
+
     return (
-        <Card sx={{ minWidth: 275, padding: { xs: '0.625rem', md: '1.25rem 0.625rem' }, mt: 4 }}>
+        <Card
+            sx={{
+                minWidth: 275,
+                padding: {
+                    xs: '0.625rem',
+                    md: '1.25rem 0.625rem'
+                },
+                mt: 4
+            }}
+        >
             <CardContent sx={{ paddingX: '0.5rem' }}>
-                <Typography variant='h5' fontWeight='600' fontSize='1.25rem'>To-Do List</Typography>
-                <Box mt={1} sx={{ maxWidth: '90%', display: 'flex', alignItems: 'flex-start' }}>
+                <Typography
+                    color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                    variant='h5'
+                    fontWeight='600'
+                    fontSize='1.25rem'
+                >
+                    To-Do List
+                </Typography>
+                <Box
+                    mt={1}
+                    sx={{
+                        maxWidth: '95%',
+                        display: 'flex',
+                        alignItems: 'flex-start'
+                    }}
+                >
                     <TextField
                         type="text"
                         InputLabelProps={{
@@ -54,19 +80,37 @@ const ToDoList = () => {
                             boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.25)',
                             borderRadius: '5px',
                             color: 'white',
-                            paddingX: '0.75rem',
                             marginLeft: '1rem',
-                            width: '5.1875rem',
+                            width: '6rem',
                             height: '2rem',
-                            display: { xs: 'none', md: 'inline-block' }
+                            display: { xs: 'none', md: 'flex' },
+                            textTransform: 'capitalize'
                         }}
                     >
                         Add
                     </Button>
                 </Box>
-                <Box mt={2} sx={{ maxWidth: '90%', display: 'flex', justifyContent: 'space-between' }}>
-                    <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                        <Checkbox defaultChecked sx={{ paddingLeft: '0', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
+                <Box
+                    mt={2}
+                    sx={{
+                        maxWidth: '95%',
+                        display: 'flex',
+                        justifyContent: 'space-between'
+                    }}
+                >
+                    <Typography
+                        variant='body1'
+                        fontWeight='500'
+                        fontSize='0.875rem'
+                    >
+                        <Checkbox
+                            defaultChecked
+                            sx={{
+                                paddingLeft: '0',
+                                color: '#FF7594',
+                                '&.Mui-checked': { color: '#EDEBEB' }
+                            }}
+                        />
                         Select All
                     </Typography>
 
@@ -77,10 +121,10 @@ const ToDoList = () => {
                             boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.25)',
                             borderRadius: '5px',
                             color: 'white',
-                            paddingX: '0.75rem',
                             marginLeft: '1rem',
-                            width: { md: '5.1875rem' },
-                            height: '2rem'
+                            width: { md: '6rem' },
+                            height: '2rem',
+                            textTransform: 'capitalize'
                         }}
                     >
                         Done
@@ -88,17 +132,47 @@ const ToDoList = () => {
                 </Box>
                 <Grid container>
                     {
-                        toDos.map(todo => {
+                        toDos?.map(todo => {
                             return (
-                                <Grid key={todo?.id} item mt={2} xs={12}>
+                                <Grid
+                                    key={todo.id}
+                                    item
+                                    mt={2}
+                                    xs={12}
+                                >
                                     <Box sx={{ display: 'flex' }}>
-                                        <Checkbox defaultChecked sx={{ pl: 0, pt: { xs: 0 }, display: 'inline', color: '#FF7594', '&.Mui-checked': { color: '#EDEBEB' } }} />
-                                        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
-                                            <Typography variant='body1' fontWeight='500' fontSize='0.875rem'>
-                                                {todo?.title}
+                                        <Checkbox
+                                            defaultChecked
+                                            sx={{
+                                                pl: 0, pt: { xs: 0 },
+                                                display: 'inline',
+                                                color: '#FF7594',
+                                                '&.Mui-checked': { color: '#EDEBEB' }
+                                            }}
+                                        />
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                flexDirection: { xs: 'column', md: 'row' }
+                                            }}
+                                        >
+                                            <Typography
+                                                variant='body1'
+                                                fontWeight='500'
+                                                fontSize='0.875rem'
+                                                color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                                            >
+                                                {todo.title}
                                             </Typography>
-                                            <Typography ml={{ md: 2 }} color='#E0E0E0' fontWeight='500' variant='body1' fontSize='0.875rem'>
-                                                {todo?.time}
+                                            <Typography
+                                                ml={{ md: 2 }}
+                                                mt={{ xs: 2, md: 0 }}
+                                                color={theme.palette.mode === 'dark' ? '#A6A6A6' : '#E0E0E0'}
+                                                fontWeight='500'
+                                                variant='body1'
+                                                fontSize='0.875rem'
+                                            >
+                                                {todo.time}
                                             </Typography>
                                         </Box>
                                     </Box>
