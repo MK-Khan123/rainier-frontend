@@ -43,7 +43,14 @@ const TopNavigation = () => {
                     marginRight: '1.7rem'
                 }}
             >
-                <IconButton sx={{ mr: 3, width: '5.125rem' }} onClick={() => setMode(!mode)} color="inherit">
+                <IconButton
+                    sx={{
+                        mr: 3,
+                        width: '5.125rem'
+                    }}
+                    onClick={() => setMode(!mode)}
+                    color="inherit"
+                >
                     {
                         theme.palette.mode === 'dark' ? (
                             <img src={darkIcon} alt="Dark Mode" />
@@ -52,7 +59,14 @@ const TopNavigation = () => {
                         )
                     }
                 </IconButton>
-                <Avatar sx={{ width: '3rem', height: '3rem' }} alt="Profile Pic" src={theme.palette.mode === 'dark' ? avatarDark : avatar} />
+                <Avatar
+                    sx={{
+                        width: '3rem',
+                        height: '3rem'
+                    }}
+                    alt="Profile Pic"
+                    src={theme.palette.mode === 'dark' ? avatarDark : avatar}
+                />
                 <ExpandMoreIcon />
             </Box>
         </Box >
