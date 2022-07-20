@@ -12,7 +12,7 @@ const HeaderMain = () => {
                 maxHeight: { lg: '13.3125rem' },
                 background: 'linear-gradient(91.57deg, #FF7594 19.86%, #FF797B 84.16%, #FF7C65 139.72%)',
                 borderRadius: '8px',
-                marginTop: '2rem'
+                mt: '2rem'
             }}
         >
             <Grid container>
@@ -24,7 +24,8 @@ const HeaderMain = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
-                        px: 2
+                        px: 2,
+                        py: { xs: 2, md: 0 }
                     }}
                 >
                     <Typography color='#FFF' fontSize='1.5rem' fontWeight='600' variant="h5" gutterBottom component="div">

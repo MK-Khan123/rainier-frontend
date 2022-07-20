@@ -17,7 +17,7 @@ const Home = () => {
         <Box sx={{ display: { lg: 'flex' } }}>
             <Sidebar />
             <Box
-                pl={{ xs: 12, md: 12, lg: 6 }}
+                pl={{ xs: 12, lg: 6 }}
                 pr={5}
                 pb={4}
                 width={{ lg: '100%' }}

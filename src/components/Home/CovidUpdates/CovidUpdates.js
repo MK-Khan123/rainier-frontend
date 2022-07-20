@@ -17,9 +17,9 @@ const CovidUpdates = () => {
                 minWidth: 200,
                 maxWidth: { lg: '28.25rem' },
                 maxHeight: { lg: '18.75rem' },
-                marginLeft: { lg: 2 },
                 borderRadius: '8px',
-                mt: { md: '1.75rem', lg: 2 }
+                mt: { xs: '1.75rem', lg: 2 },
+                ml: { lg: 2 }
             }}
         >
             <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}>
@@ -66,12 +66,12 @@ const CovidUpdates = () => {
                         sx={{
                             background: 'linear-gradient(101.27deg, #FF7594 -6.58%, #FF7C65 102.46%)',
                             boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.25)',
-                            borderRadius: '8px',
-                            margin: { md: 'auto', lg: 0 },
-                            overflow: 'auto',
-                            maxWidth: { xs: '177px', md: '23.5625rem', lg: '11.0625rem' },
+                            maxWidth: { xs: '11.0625rem', md: '23.5625rem', lg: '11.0625rem' },
                             maxHeight: { lg: '11.875rem' },
-                            marginBottom: { md: 2, lg: 0 }
+                            borderRadius: '8px',
+                            overflow: 'auto',
+                            mx: { xs: 'auto', lg: 0 },
+                            mb: { xs: 2, lg: 0 }
                         }}
                     >
                         <Box
@@ -80,7 +80,7 @@ const CovidUpdates = () => {
                                 flexDirection: { lg: 'column' },
                                 justifyContent: { md: 'center' },
                                 margin: 'auto',
-                                padding: { sm: 1 }                                
+                                padding: { sm: 1 }
                             }}
                         >
                             <Box

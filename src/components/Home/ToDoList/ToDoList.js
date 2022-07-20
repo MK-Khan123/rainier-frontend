@@ -14,22 +14,22 @@ const toDos = [
     {
         id: '011',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        time: 'Last Added: 10 sep 2022'
+        time: 'Last Added: 10 Sep 2022'
     },
     {
         id: '022',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        time: 'Last Added: 10 sep 2022'
+        time: 'Last Added: 10 Sep 2022'
     },
     {
         id: '033',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        time: 'Last Added: 10 sep 2022'
+        time: 'Last Added: 10 Sep 2022'
     },
     {
         id: '044',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        time: 'Last Added: 10 sep 2022'
+        time: 'Last Added: 10 Sep 2022'
     }
 ];
 
@@ -43,9 +43,9 @@ const ToDoList = () => {
             sx={{
                 minWidth: 275,
                 maxWidth: { md: '30rem', lg: '44.875rem' },
-                maxHeight: { md: '29.28rem', lg: '27.8125rem' },
+                maxHeight: { xs: '29.25rem', lg: '27.8125rem' },
                 borderRadius: '8px',
-                marginTop: { md: '1.75rem' },
+                mt: { xs: '1.75rem' },
                 overflow: 'auto',
                 padding: {
                     xs: '0.625rem',
@@ -89,7 +89,7 @@ const ToDoList = () => {
                             marginLeft: '1rem',
                             width: '6rem',
                             height: '2rem',
-                            display: { md: 'none', lg: 'flex' },
+                            display: { xs: 'none', lg: 'flex' },
                             textTransform: 'capitalize'
                         }}
                     >
@@ -143,7 +143,7 @@ const ToDoList = () => {
                                 <Grid
                                     key={todo.id}
                                     item
-                                    mt={{ md: 2, lg: 1 }}
+                                    mt={{ xs: 2, lg: 1 }}
                                     xs={12}
                                 >
                                     <Box sx={{ display: 'flex' }}>
@@ -172,7 +172,8 @@ const ToDoList = () => {
                                             </Typography>
                                             <Typography
                                                 ml={{ md: 2, lg: 4 }}
-                                                mt={{ xs: 2, md: 0 }}
+                                                mt={{ xs: 1, md: 0 }}
+                                                mb={{ xs: 3, md: 0 }}
                                                 color={theme.palette.mode === 'dark' ? '#A6A6A6' : '#E0E0E0'}
                                                 fontWeight='500'
                                                 variant='body1'

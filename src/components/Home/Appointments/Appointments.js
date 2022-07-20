@@ -99,9 +99,9 @@ const Appointments = () => {
             sx={{
                 minWidth: 275,
                 maxWidth: { md: '30rem', lg: '28.25rem' },
-                maxHeight: { sm: '29.25rem', md: '29.28rem', lg: '35.625rem' },
-                marginLeft: { md: 2, lg: 2 },
-                marginTop: { md: '1.75rem', lg: '2rem' },
+                maxHeight: { xs: '29.25rem', lg: '35.625rem' },
+                ml: { md: 2, lg: 2 },
+                mt: { xs: '1.75rem', lg: '2rem' },
                 overflow: 'auto',
                 borderRadius: '8px'
             }}
