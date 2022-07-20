@@ -7,40 +7,44 @@ import PatientStat from './PatientStat/PatientStat';
 import ToDoList from './ToDoList/ToDoList';
 import Appointments from './Appointments/Appointments';
 import CovidUpdates from './CovidUpdates/CovidUpdates';
-import Grid from '@mui/material/Grid';
+import './Home.css';
 
 const Home = () => {
 
     const theme = useTheme();
 
     return (
-        <>
+        <Box sx={{ display: { lg: 'flex' } }}>
             <Sidebar />
-            <Box pl={12} pr={5} backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : ''}>
-                <Grid container>
-                    <Grid item xs={12}>
+            <Box
+                pl={{ xs: 12, md: 12, lg: 6 }}
+                pr={5}
+                pb={4}
+                width={{ lg: '100%' }}
+                backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : ''}
+            >
+                <div className='container'>
+                    <div className='top-navigation'>
                         <TopNavigation />
-                    </Grid>
-                    <Grid item xs={12}>
+                    </div>
+                    <div className='header-main'>
                         <HeaderMain />
-                    </Grid>
-                    <Grid item xs={12}>
+                    </div>
+                    <div className='patient-stat'>
                         <PatientStat />
-                    </Grid>
-                    <Box sx={{ display: { md: 'flex' }, flexDirection: { md: 'row-reverse' } }}>
-                        <Grid item xs={12}>
-                            <Appointments />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <ToDoList />
-                        </Grid>
-                    </Box>
-                    <Grid item xs={12}>
+                    </div>
+                    <div className='appointments'>
+                        <Appointments />
+                    </div>
+                    <div className='to-do-list'>
+                        <ToDoList />
+                    </div>
+                    <div className='covid-updates'>
                         <CovidUpdates />
-                    </Grid>
-                </Grid>
+                    </div>
+                </div>
             </Box>
-        </>
+        </Box>
     );
 };
 

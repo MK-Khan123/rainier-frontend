@@ -5,13 +5,23 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import vaccinationImage from '../../../images/covid-updates/svg_sample_2.svg';
+import './CovidUpdates.css';
 
 const CovidUpdates = () => {
 
     const theme = useTheme();
 
     return (
-        <Card sx={{ minWidth: 200, marginBottom: '1rem', borderRadius: '8px', mt: 4 }}>
+        <Card
+            sx={{
+                minWidth: 200,
+                maxWidth: { lg: '28.25rem' },
+                maxHeight: { lg: '18.75rem' },
+                marginLeft: { lg: 2 },
+                borderRadius: '8px',
+                mt: { md: '1.75rem', lg: 2 }
+            }}
+        >
             <CardContent sx={{ padding: 0, ':last-child': { padding: 0 } }}>
                 <Box
                     sx={{ display: { md: 'flex', alignItems: 'center', justifyContent: 'space-between' } }}
@@ -47,20 +57,32 @@ const CovidUpdates = () => {
                     </Box>
                 </Box>
 
-                <Grid container align='center' pb={3}>
-                    <Grid item xs={12} md={6}>
+                <Grid container align='center'>
+                    <Grid item xs={12} md={6} lg={7}>
                         <img src={vaccinationImage} alt="" />
                     </Grid>
-                    <Grid container item xs={12} md={6}
+                    <Grid item xs={12} md={5} lg={5}
+                        className='covid-update'
                         sx={{
                             background: 'linear-gradient(101.27deg, #FF7594 -6.58%, #FF7C65 102.46%)',
                             boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.25)',
                             borderRadius: '8px',
-                            margin: 'auto',
-                            maxWidth: { xs: '177px', md: '377px' }
+                            margin: { md: 'auto', lg: 0 },
+                            overflow: 'auto',
+                            maxWidth: { xs: '177px', md: '23.5625rem', lg: '11.0625rem' },
+                            maxHeight: { lg: '11.875rem' },
+                            marginBottom: { md: 2, lg: 0 }
                         }}
                     >
-                        <Box sx={{ display: { md: 'flex' }, margin: 'auto', padding: { sm: 1 }, }}>
+                        <Box
+                            sx={{
+                                display: { md: 'flex' },
+                                flexDirection: { lg: 'column' },
+                                justifyContent: { md: 'center' },
+                                margin: 'auto',
+                                padding: { sm: 1 }                                
+                            }}
+                        >
                             <Box
                                 sx={{
                                     display: 'flex',
@@ -163,7 +185,7 @@ const CovidUpdates = () => {
                     </Grid>
                 </Grid>
             </CardContent>
-        </Card >
+        </Card>
     );
 };
 

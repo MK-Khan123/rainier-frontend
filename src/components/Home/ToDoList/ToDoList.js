@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import DoneIcon from '@mui/icons-material/Done';
+import './ToDoList.css';
 
 const toDos = [
     {
@@ -38,13 +39,18 @@ const ToDoList = () => {
 
     return (
         <Card
+            className='to-do-list-container'
             sx={{
                 minWidth: 275,
+                maxWidth: { md: '30rem', lg: '44.875rem' },
+                maxHeight: { md: '29.28rem', lg: '27.8125rem' },
+                borderRadius: '8px',
+                marginTop: { md: '1.75rem' },
+                overflow: 'auto',
                 padding: {
                     xs: '0.625rem',
                     md: '1.25rem 0.625rem'
                 },
-                mt: 4
             }}
         >
             <CardContent sx={{ paddingX: '0.5rem' }}>
@@ -83,7 +89,7 @@ const ToDoList = () => {
                             marginLeft: '1rem',
                             width: '6rem',
                             height: '2rem',
-                            display: { xs: 'none', md: 'flex' },
+                            display: { md: 'none', lg: 'flex' },
                             textTransform: 'capitalize'
                         }}
                     >
@@ -137,7 +143,7 @@ const ToDoList = () => {
                                 <Grid
                                     key={todo.id}
                                     item
-                                    mt={2}
+                                    mt={{ md: 2, lg: 1 }}
                                     xs={12}
                                 >
                                     <Box sx={{ display: 'flex' }}>
@@ -165,7 +171,7 @@ const ToDoList = () => {
                                                 {todo.title}
                                             </Typography>
                                             <Typography
-                                                ml={{ md: 2 }}
+                                                ml={{ md: 2, lg: 4 }}
                                                 mt={{ xs: 2, md: 0 }}
                                                 color={theme.palette.mode === 'dark' ? '#A6A6A6' : '#E0E0E0'}
                                                 fontWeight='500'

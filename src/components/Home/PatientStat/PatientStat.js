@@ -63,7 +63,7 @@ const PatientStat = () => {
     const theme = useTheme();
 
     return (
-        <Grid container spacing={2} sx={{ marginTop: '1.75rem', paddingBottom: '2rem' }}>
+        <Grid container mt={{md: '1.75rem'}} sx={{ maxWidth: {lg: '44.875rem'} }}>
             {
                 patientStat?.map(stat => {
                     return (
@@ -76,7 +76,7 @@ const PatientStat = () => {
                                     border: '1px solid #EDEBEB',
                                     boxShadow: '0px 3.29032px 4.1129px rgba(0, 0, 0, 0.2)',
                                     padding: '0.7rem',
-                                    margin: 'auto'
+                                    // margin: 'auto'
                                 }}
                             >
                                 <CardContent sx={{ padding: 0 }}>

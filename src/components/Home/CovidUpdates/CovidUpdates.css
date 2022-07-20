@@ -1,0 +1,12 @@
+.covid-update::-webkit-scrollbar {
+  width: 4px;
+}
+
+.covid-update::-webkit-scrollbar-thumb {
+  background: #ff7590;
+  border-radius: 2px;
+}
+
+.covid-update::-webkit-scrollbar-track {
+  background: #f6f1f1;
+}

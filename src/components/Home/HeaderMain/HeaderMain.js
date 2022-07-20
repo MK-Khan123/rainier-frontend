@@ -8,6 +8,8 @@ const HeaderMain = () => {
     return (
         <Box
             sx={{
+                maxWidth: { lg: '44.875rem' },
+                maxHeight: { lg: '13.3125rem' },
                 background: 'linear-gradient(91.57deg, #FF7594 19.86%, #FF797B 84.16%, #FF7C65 139.72%)',
                 borderRadius: '8px',
                 marginTop: '2rem'

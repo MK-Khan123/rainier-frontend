@@ -1,0 +1,12 @@
+.to-do-list-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.to-do-list-container::-webkit-scrollbar-thumb {
+  background: #ff7590;
+  border-radius: 2px;
+}
+
+.to-do-list-container::-webkit-scrollbar-track {
+  background: #f6f1f1;
+}

@@ -1,0 +1,61 @@
+.container {
+  display: grid;
+}
+
+.top-navigation {
+  grid-area: top-navigation;
+}
+
+.header-main {
+  grid-area: header-main;
+}
+
+.patient-stat {
+  grid-area: patient-stat;
+}
+
+.appointments {
+  grid-area: appointments;
+}
+
+.to-do-list {
+  grid-area: to-do-list;
+}
+
+.covid-updates {
+  grid-area: covid-updates;
+}
+
+@media only screen and (min-width: 390px) {
+  .container {
+    grid-template-areas:
+      "top-navigation"
+      "header-main"
+      "patient-stat"
+      "appointments"
+      "to-do-list"
+      "covid-updates";
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .container {
+    grid-template-areas:
+      "top-navigation top-navigation"
+      "header-main header-main"
+      "patient-stat patient-stat"
+      "to-do-list appointments"
+      "covid-updates covid-updates";
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .container {
+    grid-template-areas:
+      "top-navigation top-navigation top-navigation top-navigation"
+      "header-main header-main header-main appointments"
+      "patient-stat patient-stat patient-stat appointments"
+      "to-do-list to-do-list to-do-list appointments"
+      "to-do-list to-do-list to-do-list covid-updates";
+  }
+}

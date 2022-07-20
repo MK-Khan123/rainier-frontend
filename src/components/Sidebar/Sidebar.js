@@ -130,7 +130,7 @@ const Sidebar = () => {
     const theme = useTheme();
 
     return (
-        <Box sx={{ xs: { position: 'fixed' } }}>
+        <Box>
             <CssBaseline />
             <Drawer variant="permanent"
                 PaperProps={{
