@@ -36,6 +36,10 @@
 }
 
 @media only screen and (min-width: 0px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .container {
     grid-template-areas:
       "top-navigation"

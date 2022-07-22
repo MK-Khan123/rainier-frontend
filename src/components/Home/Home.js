@@ -20,7 +20,7 @@ const Home = () => {
                 pl={{ md: 12, lg: 6 }}
                 pr={{ md: 5 }}
                 pb={4}
-                width={{ lg: '100%' }}
+                width={{ xs: '100%' }}
                 backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : 'null'}
                 position='relative'
             >
