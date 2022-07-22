@@ -21,7 +21,7 @@ const Home = () => {
                 pr={{ md: 5 }}
                 pb={4}
                 width={{ lg: '100%' }}
-                backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : ''}
+                backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : 'null'}
                 position='relative'
             >
                 <div className='container'>

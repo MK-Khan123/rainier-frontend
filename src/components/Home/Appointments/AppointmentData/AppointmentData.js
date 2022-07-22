@@ -17,7 +17,7 @@ const AppointmentData = ({ appointment }) => {
                 // minWidth: 200,
                 marginBottom: '1rem',
                 borderRadius: '15px 8px 8px 15px',
-                border: theme.palette.mode === 'dark' ? '1px solid white' : ''
+                border: theme.palette.mode === 'dark' ? '1px solid white' : 'null'
             }}
         >
             <CardContent
@@ -25,7 +25,7 @@ const AppointmentData = ({ appointment }) => {
                     padding: 0,
                     ':last-child': { padding: 0 },
                     display: 'flex',
-                    backgroundColor: theme.palette.mode === 'dark' ? '' : '#FFF5F5'
+                    backgroundColor: theme.palette.mode === 'dark' ? 'null' : '#FFF5F5'
                 }}
             >
                 <Paper

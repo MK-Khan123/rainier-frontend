@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import DoneIcon from '@mui/icons-material/Done';
+import addIcon from '../../../images/to-do-list/small.svg';
 import './ToDoList.css';
 
 const toDos = [
@@ -37,6 +38,20 @@ const ToDoList = () => {
 
     const theme = useTheme();
 
+    const CustomTextField = styled(TextField)({
+
+        '& .MuiOutlinedInput-root': {
+
+            backgroundColor: theme.palette.mode === 'dark' ? '#959190' : 'null',
+            borderRadius: '8px',
+            color: theme.palette.mode === 'dark' ? '#000' : 'null',
+
+            '&.Mui-focused fieldset': {
+                borderColor: '#FF7590',
+            },
+        }
+    });
+
     return (
         <Card
             className='to-do-list-container'
@@ -55,7 +70,7 @@ const ToDoList = () => {
         >
             <CardContent sx={{ paddingX: '0.5rem' }}>
                 <Typography
-                    color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                    color={theme.palette.mode === 'dark' ? '#D1D5DB' : 'null'}
                     variant='h5'
                     fontWeight='600'
                     fontSize='1.25rem'
@@ -70,15 +85,29 @@ const ToDoList = () => {
                         alignItems: 'flex-start'
                     }}
                 >
-                    <TextField
-                        type="text"
-                        InputLabelProps={{
-                            shrink: true
-                        }}
-                        fullWidth
-                        multiline
-                        rows={2}
-                    />
+                    <Box sx={{ position: 'relative', width: '100%' }}>
+                        <CustomTextField
+                            type="text"
+                            InputLabelProps={{
+                                shrink: true
+                            }}
+                            fullWidth
+                            multiline
+                            rows={2}
+                        />
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                right: 3,
+                                bottom: 0,
+                                display: { lg: 'none' }
+                            }}
+                            component='img'
+                            src={addIcon}
+                            alt='Add'
+                        >
+                        </Box>
+                    </Box>
                     <Button
                         startIcon={<DoneIcon />}
                         sx={{
@@ -166,7 +195,7 @@ const ToDoList = () => {
                                                 variant='body1'
                                                 fontWeight='500'
                                                 fontSize='0.875rem'
-                                                color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                                                color={theme.palette.mode === 'dark' ? '#D1D5DB' : 'null'}
                                             >
                                                 {todo.title}
                                             </Typography>

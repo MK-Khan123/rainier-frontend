@@ -83,7 +83,7 @@ const PatientStat = () => {
                                     <img src={theme.palette.mode === 'dark' ? stat.icon.dark : stat.icon.light} alt={stat.title} />
                                     <Typography
                                         mt={1}
-                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : 'null'}
                                         textTransform='capitalize'
                                         fontSize='0.8rem'
                                         fontWeight='600'
@@ -94,7 +94,7 @@ const PatientStat = () => {
                                     </Typography>
                                     <Typography
                                         mt={1}
-                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : ''}
+                                        color={theme.palette.mode === 'dark' ? '#D1D5DB' : 'null'}
                                         fontSize='1rem'
                                         fontWeight='600'
                                         variant="body1"
@@ -108,7 +108,7 @@ const PatientStat = () => {
                                             alignItems: 'center'
                                         }}
                                     >
-                                        <ArrowDropUpIcon sx={{ color: theme.palette.mode === 'dark' ? '#D1D5DB' : '' }} />
+                                        <ArrowDropUpIcon sx={{ color: theme.palette.mode === 'dark' ? '#D1D5DB' : 'null' }} />
                                         <Box>
                                             <Typography
                                                 mt={1}

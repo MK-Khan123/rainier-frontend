@@ -161,7 +161,7 @@ const Sidebar = () => {
             <Drawer variant="permanent"
                 PaperProps={{
                     sx: {
-                        backgroundColor: theme.palette.mode === 'dark' ? '#2E1619' : '',
+                        backgroundColor: theme.palette.mode === 'dark' ? '#2E1619' : 'null',
                     }
                 }}
                 open={open}>
@@ -185,7 +185,7 @@ const Sidebar = () => {
                                 aria-label="open drawer"
                                 onClick={handleDrawerOpen}
                                 sx={{
-                                    backgroundColor: theme.palette.mode === 'dark' ? '#FF7594' : '',
+                                    backgroundColor: theme.palette.mode === 'dark' ? '#FF7594' : 'null',
                                     color: theme.palette.mode === 'dark' ? '#D1D5DB' : '#FF7594',
                                     width: '41px',
                                     height: '41px',

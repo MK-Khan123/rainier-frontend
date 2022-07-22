@@ -48,7 +48,7 @@ const CovidUpdates = () => {
                         <Typography
                             variant='body1'
                             fontSize='1rem'
-                            color={theme.palette.mode === 'dark' ? '' : '#8A8686'}
+                            color={theme.palette.mode === 'dark' ? 'null' : '#8A8686'}
                             gutterBottom
                             pl={2}
                         >
