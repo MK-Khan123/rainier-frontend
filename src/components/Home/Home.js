@@ -17,11 +17,12 @@ const Home = () => {
         <Box sx={{ display: { lg: 'flex' } }}>
             <Sidebar />
             <Box
-                pl={{ xs: 12, lg: 6 }}
-                pr={5}
+                pl={{ md: 12, lg: 6 }}
+                pr={{ md: 5 }}
                 pb={4}
                 width={{ lg: '100%' }}
                 backgroundColor={theme.palette.mode === 'light' ? '#F9F9F9' : ''}
+                position='relative'
             >
                 <div className='container'>
                     <div className='top-navigation'>

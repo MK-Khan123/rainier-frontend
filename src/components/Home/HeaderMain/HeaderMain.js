@@ -8,18 +8,21 @@ const HeaderMain = () => {
     return (
         <Box
             sx={{
-                maxWidth: { lg: '44.875rem' },
+                maxWidth: { xs: '100%', lg: '44.875rem' },
                 maxHeight: { lg: '13.3125rem' },
                 background: 'linear-gradient(91.57deg, #FF7594 19.86%, #FF797B 84.16%, #FF7C65 139.72%)',
-                borderRadius: '8px',
-                mt: '2rem'
+                borderRadius: { md: '8px' },
+                mt: { md: '2rem' },
+                p: { xs: 6, md: 0 }
             }}
         >
             <Grid container>
-                <Grid item md={6}>
-                    <img src={bannerImage} alt="" />
+                <Grid item xs={12} md={6}>
+                    <Box sx={{ display: { xs: 'flex', md: 'inline' }, justifyContent: { xs: 'center' } }}>
+                        <Box component='img' src={bannerImage} alt="" />
+                    </Box>
                 </Grid>
-                <Grid item md={6}
+                <Grid item xs={12} md={6}
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',

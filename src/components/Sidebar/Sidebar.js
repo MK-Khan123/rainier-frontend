@@ -45,9 +45,12 @@ const closedMixin = (theme) => ({
     }),
     overflowX: 'hidden',
     width: `calc(${theme.spacing(7)} + 1px)`,
-    [theme.breakpoints.up('sm')]: {
-        width: `calc(${theme.spacing(8)} + 1px)`,
+    [theme.breakpoints.up('xs')]: {
+        width: `calc(${theme.spacing(0)} + 1px)`,
     },
+    [theme.breakpoints.up('md')]: {
+        width: `calc(${theme.spacing(8)} + 1px)`,
+    }
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -132,6 +135,29 @@ const Sidebar = () => {
     return (
         <Box>
             <CssBaseline />
+
+            {/* This button appears when the display is smaller than 834px */}
+            <IconButton
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                sx={{
+                    backgroundColor: '#FFF',
+                    '&:hover': { backgroundColor: '#FFF' },
+                    color: '#FF7594',
+                    width: '41px',
+                    height: '41px',
+                    margin: '0.5rem',
+                    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '5px',
+                    ...(open && { display: 'none' }),
+                    display: { xs: 'block', md: 'none' },
+                    position: 'absolute',
+                    zIndex: 5
+                }}
+            >
+                <MenuIcon />
+            </IconButton>
+
             <Drawer variant="permanent"
                 PaperProps={{
                     sx: {

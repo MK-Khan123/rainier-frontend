@@ -27,6 +27,15 @@
 }
 
 @media only screen and (min-width: 390px) {
+  .patient-stat,
+  .appointments,
+  .to-do-list,
+  .covid-updates {
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 390px) {
   .container {
     grid-template-areas:
       "top-navigation"
@@ -35,6 +44,15 @@
       "appointments"
       "to-do-list"
       "covid-updates";
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .patient-stat,
+  .appointments,
+  .to-do-list,
+  .covid-updates {
+    margin: 0;
   }
 }
 
